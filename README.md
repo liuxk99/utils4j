@@ -1,2 +1,2 @@
-# sjJUtils
+# utils4j
 Unitilies for Java
