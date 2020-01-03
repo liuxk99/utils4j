@@ -1,4 +1,4 @@
-package com.sj.utils.java;
+package com.sj4j.utils;
 
 public class MyClass {
 
