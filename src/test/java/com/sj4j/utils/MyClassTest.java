@@ -1,7 +1,6 @@
 package com.sj4j.utils;
 
 import com.fasterxml.uuid.Generators;
-import com.sj4j.utils.MyClass;
 
 import java.util.UUID;
 
@@ -29,9 +28,17 @@ public class MyClassTest {
         UUID uuid1 = Generators.timeBasedGenerator().generate();
         dumpUUID(uuid1);
 
-        // Generate random UUID
-        UUID uuid2 = Generators.randomBasedGenerator().generate();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        UUID uuid2 = Generators.timeBasedGenerator().generate();
         dumpUUID(uuid2);
+
+        // Generate random UUID
+        UUID uuid3 = Generators.randomBasedGenerator().generate();
+        dumpUUID(uuid3);
     }
 
     private void dumpUUID(UUID uuid) {
@@ -44,6 +51,15 @@ public class MyClassTest {
     public void testcase_guid_java() {
         //initialize uuid
         UUID uuid = UUID.randomUUID();
+        dumpUUID(uuid);
+    }
+
+    @org.junit.Test
+    public void testcase_uuid_str() {
+        // creating UUID
+        UUID uuid = UUID.fromString("38400000-8cf0-11bd-b23e-10b96e4ef00d");
+
+        // checking UUID value
         dumpUUID(uuid);
     }
 }
