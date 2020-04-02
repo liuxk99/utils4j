@@ -2,6 +2,8 @@ package com.sj4j.utils;
 
 import com.fasterxml.uuid.Generators;
 
+import java.io.IOException;
+import java.util.Properties;
 import java.util.UUID;
 
 public class MyClassTest {
