@@ -13,3 +13,11 @@ dependencies {
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
+
+compileJava{
+    options.encoding = "UTF-8"
+}
+
+compileTestJava {
+    options.encoding = "UTF-8"
+}
